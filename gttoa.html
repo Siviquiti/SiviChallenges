@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivi Challenges</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Bouton "Sivi Challenges" en haut à gauche -->
+        <div class="logo">
+            <a href="index.html" class="home-link">Sivi Challenges</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Guess The Top Of Artist</h1>
+        <p class="instructions">Devinez la chanson du jour !</p>
+
+        <!-- Ajout de contenu supplémentaire sous forme de sections -->
+        <section class="info-section">
+            <h2>Comment jouer ?</h2>
+            <p>Écoutez un extrait audio d'une chanson populaire et essayez de deviner l'artiste et la chanson. À la fin, vous recevrez un score !</p>
+        </section>
+
+        <section class="how-to-play">
+            <h2>Conseils pour mieux jouer</h2>
+            <ul>
+                <li>Écoutez attentivement l'extrait sonore.</li>
+                <li>Entrez le nom de l'artiste et de la chanson que vous pensez correspondre à l'extrait.</li>
+            </ul>
+        </section>
+
+        <!-- Bouton pour démarrer -->
+        <button id="startButton" class="start-button">Commencer</button>
+
+        <!-- Container du jeu (caché au départ) -->
+        <div id="game" class="game-container" style="display: none;">
+            <audio id="audioClip" controls></audio>
+            <input type="text" id="artistInput" placeholder="Entrez l'artiste" />
+            <input type="text" id="songInput" placeholder="Entrez le nom de la chanson" />
+            <button id="submitButton" class="submit-button">Soumettre</button>
+            <button id="abortButton" class="abort-button">Abandonner</button>
+            
+            <!-- Nouveau bouton ajouté -->
+            <button id="resetButton" class="reset-button" style="display: none;">Réinitialiser le jeu</button>
+            
+            <div id="result" class="result" style="display: none;">
+                <p id="correctAnswer"></p>
+                <p id="nextDayMessage" style="display: none;">Revenez demain pour un autre extrait !</p>
+            </div>
+            <p id="timer" class="timer">Score : 1000</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Développé par Sivi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
